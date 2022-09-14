@@ -1,0 +1,146 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: webGLC__Lib
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/oleksiichernov/Documents/UnityProjects/webGLC++Lib/cmake-build-debug/
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target MathLib
+
+
+#############################################
+# Order-only phony target for MathLib
+
+build cmake_object_order_depends_target_MathLib: phony || CMakeFiles/MathLib.dir
+
+build CMakeFiles/MathLib.dir/mathBase.cpp.o: CXX_COMPILER__MathLib_Debug /Users/oleksiichernov/Documents/UnityProjects/webGLC++Lib/mathBase.cpp || cmake_object_order_depends_target_MathLib
+  DEFINES = -DMathLib_EXPORTS
+  DEP_FILE = CMakeFiles/MathLib.dir/mathBase.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC -std=gnu++14
+  OBJECT_DIR = CMakeFiles/MathLib.dir
+  OBJECT_FILE_DIR = CMakeFiles/MathLib.dir
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target MathLib
+
+
+#############################################
+# Link the shared library libMathLib.dylib
+
+build libMathLib.dylib: CXX_SHARED_LIBRARY_LINKER__MathLib_Debug CMakeFiles/MathLib.dir/mathBase.cpp.o
+  ARCH_FLAGS = -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  INSTALLNAME_DIR = @rpath/
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/MathLib.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libMathLib.dylib
+  SONAME_FLAG = -install_name
+  TARGET_FILE = libMathLib.dylib
+  TARGET_PDB = MathLib.dylib.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/oleksiichernov/Documents/UnityProjects/webGLC++Lib/cmake-build-debug && "/Users/oleksiichernov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/oleksiichernov/Documents/UnityProjects/webGLC++Lib/cmake-build-debug && "/Users/oleksiichernov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/oleksiichernov/Documents/UnityProjects/webGLC++Lib -B/Users/oleksiichernov/Documents/UnityProjects/webGLC++Lib/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+build MathLib: phony libMathLib.dylib
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/oleksiichernov/Documents/UnityProjects/webGLC++Lib/cmake-build-debug
+
+build all: phony libMathLib.dylib
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/oleksiichernov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

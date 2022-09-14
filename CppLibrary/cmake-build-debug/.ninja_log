@@ -1,0 +1,15 @@
+# ninja log v5
+48	110	1663010392687542771	libMathLib.dylib	6e07d27e59cfd985
+0	103	1663180936489541563	build.ninja	ad28399a64f0ff69
+0	48	1663010392625148661	CMakeFiles/MathLib.dir/mathVectors.cpp.o	c3712247a6aeebde
+1	292	1662491366686709048	CMakeFiles/webGLC__Lib.dir/Vector3.cpp.o	62dd122331de11eb
+0	6	0	clean	a557173e9db954e9
+0	46	1663010392623576953	CMakeFiles/MathLib.dir/mathBase.cpp.o	810da3207e7a33
+0	302	1662491366699376236	CMakeFiles/webGLC__Lib.dir/mathBase.cpp.o	2136f4893f4bcb1e
+306	395	1662491366793408787	libwebGLC__Lib.dylib	450d49c4cf1dbfb9
+0	44	1663010392620835152	CMakeFiles/MathLib.dir/Vector3.cpp.o	f8c3fc2798337f31
+1	306	1662491366703784437	CMakeFiles/webGLC__Lib.dir/mathVectors.cpp.o	d09ae043d9b69ec5
+8	139	1663180936489541563	build.ninja	ad28399a64f0ff69
+0	6	0	clean	a557173e9db954e9
+0	421	1663180937217809986	CMakeFiles/MathLib.dir/mathBase.cpp.o	810da3207e7a33
+421	558	1663180937358995553	libMathLib.dylib	d5fec0ccf5f11739
